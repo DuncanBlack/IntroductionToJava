@@ -12,8 +12,10 @@ public class PongSide extends Actor
      * Act - do whatever the PongSide wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public PongSide()
+    int playerNumber = 0;
+    public PongSide(int player)
     {
+        playerNumber = player;
         getImage().scale(10, 100);
     }
     public void act() 
@@ -22,9 +24,17 @@ public class PongSide extends Actor
     }    
     public void CheckKeys()
     {
-        if(Greenfoot.isKeyDown("up")) {
+       String upKey = "up"; 
+       if (playerNumber ==2) {
+           upKey = "w";
+        }
+        if(Greenfoot.isKeyDown(upKey)) {
             setLocation(getX(), getY() -5);}
-            if(Greenfoot.isKeyDown("down")) {
+            String downKey = "down" ;
+       if (playerNumber ==2) {
+           downKey = "s";
+        }
+            if(Greenfoot.isKeyDown(downKey)) {
             setLocation(getX(), getY() +5);
     }
 }

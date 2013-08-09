@@ -27,10 +27,10 @@ public class TwoPlayerWorld extends World
      */
     private void prepare()
     {
-        PongSide pongside = new PongSide();
+        PongSide pongside = new PongSide(1);
         addObject(pongside, 137, 227);
         pongside.setLocation(49, 295);
-        PongSide pongside2 = new PongSide();
+        PongSide pongside2 = new PongSide(2);
         addObject(pongside2, 463, 299);
         pongside2.setLocation(549, 294);
         PongBall pongball = new PongBall();

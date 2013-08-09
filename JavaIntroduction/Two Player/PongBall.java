@@ -22,7 +22,7 @@ public class PongBall extends Actor
     }    
     public void Movement() 
     {
-        move (4);
+        move (8);
         bounceFromEdge();
         bounceFromPongSide();
         check();
@@ -36,7 +36,7 @@ public class PongBall extends Actor
             horizontalBounce();
             int distanceFromCenter = getY() - pongside.getY();
             turn(distanceFromCenter / 2);
-            move(4);
+            move(8);
         }
 }
 
